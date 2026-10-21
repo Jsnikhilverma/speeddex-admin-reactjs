@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8fafc;
+    color: #0f172a;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ========================================================================= */
+/* MAIN CONTENT WHITE BACKGROUND & BLACK/BLUE THEME OVERRIDES               */
+/* ========================================================================= */
+.app-main-content {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Convert dark card panels in main content to crisp white cards */
+.app-main-content .bg-slate-900,
+.app-main-content .bg-slate-900\/80,
+.app-main-content .bg-slate-900\/90,
+.app-main-content .bg-slate-900\/60,
+.app-main-content .bg-slate-900\/40,
+.app-main-content .bg-slate-950,
+.app-main-content .bg-slate-950\/80,
+.app-main-content .bg-slate-950\/70,
+.app-main-content .bg-slate-950\/60,
+.app-main-content .bg-slate-950\/50,
+.app-main-content .bg-slate-950\/40 {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+}
+
+/* Borders in main content */
+.app-main-content .border-slate-800,
+.app-main-content .border-slate-800\/80,
+.app-main-content .border-slate-800\/60,
+.app-main-content .border-slate-800\/50,
+.app-main-content .border-slate-700,
+.app-main-content .border-slate-700\/60 {
+  border-color: #e2e8f0;
+}
+
+/* Text color adaptations in main content */
+.app-main-content h1.text-white,
+.app-main-content h2.text-white,
+.app-main-content h3.text-white,
+.app-main-content span.text-white,
+.app-main-content p.text-white,
+.app-main-content td.text-white,
+.app-main-content div.text-white {
+  color: #0f172a;
+}
+
+.app-main-content .text-slate-300,
+.app-main-content .text-slate-400 {
+  color: #64748b;
+}
+
+/* Table Headers in main content */
+.app-main-content thead tr,
+.app-main-content th {
+  background-color: #f8fafc;
+  color: #475569;
+  border-color: #e2e8f0;
+}
+
+/* Table Rows in main content */
+.app-main-content tbody tr {
+  border-color: #f1f5f9;
+}
+.app-main-content tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Form inputs & Selects in main content */
+.app-main-content input[type="text"],
+.app-main-content input[type="number"],
+.app-main-content input[type="email"],
+.app-main-content input[type="password"],
+.app-main-content input[type="date"],
+.app-main-content select,
+.app-main-content textarea {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+.app-main-content input::placeholder,
+.app-main-content textarea::placeholder {
+  color: #94a3b8;
+}
+
+.app-main-content input:focus,
+.app-main-content select:focus,
+.app-main-content textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* Primary buttons across main content converted to Blue */
+.app-main-content button.bg-amber-500,
+.app-main-content button.bg-amber-400,
+.app-main-content button.bg-yellow-500,
+.app-main-content a.bg-amber-500 {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -2px rgba(37, 99, 235, 0.2) !important;
+}
+
+.app-main-content button.bg-amber-500:hover,
+.app-main-content button.bg-amber-400:hover,
+.app-main-content button.bg-yellow-500:hover {
+  background-color: #1d4ed8 !important;
+}
+
+/* Secondary icon buttons in main content */
+.app-main-content button.bg-slate-900,
+.app-main-content button.bg-slate-800 {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+  color: #334155;
+}
+.app-main-content button.bg-slate-900:hover,
+.app-main-content button.bg-slate-800:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Modal Window Light Theme Overrides */
+.modal-content-container,
+.relative.w-full.rounded-2xl.bg-slate-900,
+.relative.w-full.rounded-3xl.bg-slate-900 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.modal-content-container .text-white,
+.relative.w-full.rounded-2xl.bg-slate-900 .text-white,
+.relative.w-full.rounded-3xl.bg-slate-900 .text-white {
+  color: #0f172a !important;
+}
+
+.modal-content-container .text-slate-400,
+.relative.w-full.rounded-2xl.bg-slate-900 .text-slate-400,
+.relative.w-full.rounded-3xl.bg-slate-900 .text-slate-400 {
+  color: #64748b !important;
+}
+
+.modal-content-container .border-slate-800,
+.relative.w-full.rounded-2xl.bg-slate-900 .border-slate-800,
+.relative.w-full.rounded-3xl.bg-slate-900 .border-slate-800 {
+  border-color: #e2e8f0 !important;
+}
+
+.modal-content-container input,
+.modal-content-container select,
+.modal-content-container textarea,
+.relative.w-full.rounded-2xl.bg-slate-900 input,
+.relative.w-full.rounded-2xl.bg-slate-900 select,
+.relative.w-full.rounded-2xl.bg-slate-900 textarea,
+.relative.w-full.rounded-3xl.bg-slate-900 input,
+.relative.w-full.rounded-3xl.bg-slate-900 select,
+.relative.w-full.rounded-3xl.bg-slate-900 textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.modal-content-container button.bg-amber-500,
+.relative.w-full.rounded-2xl.bg-slate-900 button.bg-amber-500,
+.relative.w-full.rounded-3xl.bg-slate-900 button.bg-amber-500 {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+/* ========================================================================= */
+/* CLIENT PROPOSAL & QUOTATION PRINT MEDIA STYLES                           */
+/* ========================================================================= */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm 10mm 12mm 10mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+  }
+
+  /* Hide everything on screen except the printable proposal */
+  body * {
+    visibility: hidden;
+  }
+
+  #printable-proposal,
+  #printable-proposal * {
+    visibility: visible;
+  }
+
+  #printable-proposal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .print-hide,
+  button,
+  nav,
+  aside {
+    display: none !important;
+  }
+
+  .print\:break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  table {
+    border-collapse: collapse !important;
+  }
+}
